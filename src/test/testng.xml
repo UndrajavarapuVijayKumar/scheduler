@@ -1,0 +1,14 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+
+<suite name="Salesforce_Scheduler" verbose="1" >
+    <listeners>
+        <listener class-name="com.metlife.listeners.Testlistener"></listener>
+    </listeners>
+    <test name="Appointment" >
+        <classes>
+            <class name="com.metlife.testsuites.HomePage_TS" />
+        </classes>
+    </test>
+
+    
+</suite>
