@@ -1,3 +1,4 @@
+/*
 package com.metlife.utils;
 
 import java.awt.AWTException;
@@ -68,24 +69,28 @@ public class WebDriverHelper {
 		this.dataHelper = dataTable;
 	}
 
-	/**
+	*/
+/**
 	 * Method to check if element is present
 	 * 
 	 * @param elementBy
 	 * @return
 	 * @throws Exception 
-	 */
+	 *//*
+
 	public boolean isElementPresent(By elementBy) throws Exception {
 
 		return isElementPresent(elementBy,5);
 	}
 	
-	/**
+	*/
+/**
 	 * Method to check if element is present after waiting for specific time
 	 * 
 	 * @param elementBy
 	 * @return
-	 */
+	 *//*
+
 	public boolean isElementPresentAfterWait(final By elementBy) {
 
 		boolean elementPresent = false;
@@ -116,24 +121,28 @@ public class WebDriverHelper {
 		return elementPresent;
 	}
 
-	/**
+	*/
+/**
 	 * Method to check if element is present without wait
 	 * 
 	 * @param elementBy
 	 * @return
 	 * @throws Exception 
-	 */
+	 *//*
+
 	public boolean noWaitElementPresent(By elementBy) throws Exception {
 
 		return isElementPresent(elementBy,1);
 	}
 
-	/**
+	*/
+/**
 	 * Method to check if element is not present without wait
 	 * 
 	 * @param elementBy
 	 * @return
-	 */
+	 *//*
+
 	public boolean isElementNotPresent(By elementBy) {
 
 		boolean elementNotPresent = true;
@@ -162,13 +171,15 @@ public class WebDriverHelper {
 		return elementNotPresent;
 	}
 
-	/**
+	*/
+/**
 	 * Method to check element is present within parent element
 	 * 
 	 * @param element
 	 * @param elementBy
 	 * @return
-	 */
+	 *//*
+
 	public boolean isElementPresent(WebElement element, By elementBy) {
 
 		boolean elementPresent = false;
@@ -190,12 +201,14 @@ public class WebDriverHelper {
 		return elementPresent;
 	}
 
-	/**
+	*/
+/**
 	 * Method to click element
 	 * 
 	 * @param elementBy
 	 * @throws Exception
-	 */
+	 *//*
+
 	public void clickElement(By elementBy) throws Exception {
 
 		boolean exceptionOccured = false;
@@ -220,10 +233,12 @@ public class WebDriverHelper {
 							jsClick(elementBy);
 						}
 
-						/*
+						*/
+/*
 						 * if(currentBrowser == Browser.IE) {
 						 * jsClick(elementBy); }
-						 */
+						 *//*
+
 
 					} catch (NoSuchElementException nsee) {
 
@@ -286,12 +301,14 @@ public class WebDriverHelper {
 		}
 	}
 
-	/**
+	*/
+/**
 	 * Method to click element
 	 * 
 	 * @param elementBy
 	 * @throws Exception
-	 */
+	 *//*
+
 	public void clickNoUrlValidation(By elementBy) throws Exception {
 
 		boolean exceptionOccured = false;
@@ -306,9 +323,11 @@ public class WebDriverHelper {
 
 					driver.findElement(elementBy).click();
 
-					/*
+					*/
+/*
 					 * if(currentBrowser == Browser.IE) { jsClick(elementBy); }
-					 */
+					 *//*
+
 
 				} catch (NoSuchElementException nsee) {
 
@@ -352,12 +371,14 @@ public class WebDriverHelper {
 		driver.manage().timeouts().implicitlyWait(waitTime, TimeUnit.SECONDS);
 	}
 
-	/**
+	*/
+/**
 	 * Method to click element
 	 * 
 	 * @param element
 	 * @throws Exception
-	 */
+	 *//*
+
 	public void clickElement(WebElement element) throws Exception {
 
 		boolean exceptionOccured = false;
@@ -371,9 +392,11 @@ public class WebDriverHelper {
 
 					element.click();
 
-					/*
+					*/
+/*
 					 * if(currentBrowser == Browser.IE) { jsClick(elementBy); }
-					 */
+					 *//*
+
 
 				} catch (NoSuchElementException nsee) {
 
@@ -415,11 +438,13 @@ public class WebDriverHelper {
 		driver.manage().timeouts().implicitlyWait(waitTime, TimeUnit.SECONDS);
 	}
 
-	/**
+	*/
+/**
 	 * Method to click using Actions
 	 * 
 	 * @param elementBy
-	 */
+	 *//*
+
 	public void clickUsingActions(By elementBy) {
 
 		try {
@@ -436,11 +461,13 @@ public class WebDriverHelper {
 		}
 	}
 
-	/**
+	*/
+/**
 	 * Method to double click using actions
 	 * 
 	 * @param elementBy
-	 */
+	 *//*
+
 	public void doubleClickUsingAction(By elementBy) {
 
 		try {
@@ -457,11 +484,13 @@ public class WebDriverHelper {
 		}
 	}
 
-	/**
+	*/
+/**
 	 * Method to check if alert box is present
 	 * 
 	 * @return
-	 */
+	 *//*
+
 	public boolean isAlertPresent() {
 
 		try {
@@ -477,12 +506,14 @@ public class WebDriverHelper {
 		}
 	}
 
-	/**
+	*/
+/**
 	 * Method to click element within parent element
 	 * 
 	 * @param element
 	 * @param elementBy
-	 */
+	 *//*
+
 	public void clickElement(WebElement element, By elementBy) {
 
 		if (isElementPresent(element, elementBy)) {
@@ -491,11 +522,13 @@ public class WebDriverHelper {
 		}
 	}
 
-	/**
+	*/
+/**
 	 * Method to mouse over element using javascript
 	 * 
 	 * @param element
-	 */
+	 *//*
+
 	public void mouseOver(WebElement element) {
 
 		String code = "var fireOnThis = arguments[0];"
@@ -507,12 +540,14 @@ public class WebDriverHelper {
 		((RemoteWebDriver) executor).executeScript(code, element);
 	}
 
-	/**
+	*/
+/**
 	 * Method to mouse over element using javascript
 	 * 
 	 * @param elementBy
 	 * @throws InterruptedException
-	 */
+	 *//*
+
 	public void mouseOver(By elementBy) throws Exception {
 
 		WebElement weElement = driver.findElement(elementBy);
@@ -529,12 +564,14 @@ public class WebDriverHelper {
 		}
 	}
 
-	/**
+	*/
+/**
 	 * Method to click element using javascript
 	 * 
 	 * @param elementBy
 	 * @throws InterruptedException
-	 */
+	 *//*
+
 	public void jsClick(By elementBy) throws Exception {
 
 		WebElement weElement = driver.findElement(elementBy);
@@ -544,12 +581,14 @@ public class WebDriverHelper {
 				weElement);
 	}
 
-	/**
+	*/
+/**
 	 * Method to click element using javascript
 	 * 
 	 * @param weElement
 	 * @throws InterruptedException
-	 */
+	 *//*
+
 	public void jsClick(WebElement weElement) throws Exception {
 
 		JavascriptExecutor executor = (JavascriptExecutor) driver;
@@ -557,11 +596,13 @@ public class WebDriverHelper {
 				weElement);
 	}
 
-	/**
+	*/
+/**
 	 * Method to click element using javascript
 	 * 
 	 * @param documentId
-	 */
+	 *//*
+
 	public void jsClick(String documentId) {
 
 		JavascriptExecutor executor = (JavascriptExecutor) driver;
@@ -570,11 +611,13 @@ public class WebDriverHelper {
 
 	}
 
-	/**
+	*/
+/**
 	 * Method to validate url
 	 * 
 	 * @param elementBy
-	 */
+	 *//*
+
 	public void validateUrl(By elementBy) {
 
 		String envUrl = dataHelper
@@ -597,11 +640,13 @@ public class WebDriverHelper {
 		}
 	}
 
-	/**
+	*/
+/**
 	 * Method to focus element
 	 * 
 	 * @param elementBy
-	 */
+	 *//*
+
 	public void focusElement(By elementBy) {
 
 		try {
@@ -618,11 +663,13 @@ public class WebDriverHelper {
 		}
 	}
 
-	/**
+	*/
+/**
 	 * Method to focus element using javascript
 	 * 
 	 * @param element
-	 */
+	 *//*
+
 	private void jsFocus(WebElement element) {
 
 		JavascriptExecutor executor = (JavascriptExecutor) driver;
@@ -630,11 +677,13 @@ public class WebDriverHelper {
 				element);
 	}
 
-	/**
+	*/
+/**
 	 * Method to clear text element
 	 * 
 	 * @param elementBy
-	 */
+	 *//*
+
 	public void clearElement(By elementBy) {
 
 		driver.findElement(elementBy).sendKeys(Keys.HOME);
@@ -642,33 +691,39 @@ public class WebDriverHelper {
 		driver.findElement(elementBy).clear();
 	}
 
-	/**
+	*/
+/**
 	 * Method to navigate back
-	 */
+	 *//*
+
 	public void navigateBack() {
 
 		driver.navigate().back();
 	}
 
-	/**
+	*/
+/**
 	 * Method to select value for dropdown list
 	 * 
 	 * @param elementBy
 	 * @param label
-	 */
+	 *//*
+
 	public void selectValue(By elementBy, String label) {
 
 		new Select(driver.findElement(elementBy)).selectByVisibleText(label);
 		
 	}
 
-	/**
+	*/
+/**
 	 * Method to send keys to text element
 	 * 
 	 * @param elementBy
 	 * @param typeValue
 	 * @throws InterruptedException
-	 */
+	 *//*
+
 	public void sendKeys(By elementBy, String typeValue) throws Exception {
 			
 		try {
@@ -685,13 +740,15 @@ public class WebDriverHelper {
 		}
 	}
 	
-	/**
+	*/
+/**
 	 * Method to send characters to text element
 	 * 
 	 * @param elementBy
 	 * @param typeValue
 	 * @throws InterruptedException
-	 */
+	 *//*
+
 	public void sendChars(By elementBy, String typeChar) throws Exception {
 
 		if (isElementPresent(elementBy)) {
@@ -700,13 +757,15 @@ public class WebDriverHelper {
 		}
 	}	
 
-	/**
+	*/
+/**
 	 * Method to get text of an element
 	 * 
 	 * @param elementBy
 	 * @return
 	 * @throws InterruptedException
-	 */
+	 *//*
+
 	public String getText(By elementBy) throws Exception {
 
 		if (noWaitElementPresent(elementBy)) {
@@ -719,13 +778,15 @@ public class WebDriverHelper {
 		}
 	}
 
-	/**
+	*/
+/**
 	 * Method to get Double value of an element
 	 * 
 	 * @param elementBy
 	 * @return
 	 * @throws InterruptedException
-	 */
+	 *//*
+
 	public Double getDouble(By elementBy) throws Exception {
 
 		Double retValue = 0.0;
@@ -741,13 +802,15 @@ public class WebDriverHelper {
 		return retValue;
 	}
 
-	/**
+	*/
+/**
 	 * Method to get Double value of an element
 	 * 
 	 * @param str
 	 * @return
 	 * @throws InterruptedException
-	 */
+	 *//*
+
 	public Double getDouble(String str) throws Exception {
 
 		Double retValue = 0.0;
@@ -763,13 +826,15 @@ public class WebDriverHelper {
 		return retValue;
 	}
 
-	/**
+	*/
+/**
 	 * Method to get Double value of an element
 	 * 
 	 * @param elementBy
 	 * @return
 	 * @throws InterruptedException
-	 */
+	 *//*
+
 	public int getInteger(By elementBy) throws Exception {
 
 		int retValue = 0;
@@ -785,13 +850,15 @@ public class WebDriverHelper {
 		return retValue;
 	}
 
-	/**
+	*/
+/**
 	 * Method to get text of an element within parent element
 	 * 
 	 * @param element
 	 * @param elementBy
 	 * @return
-	 */
+	 *//*
+
 	public String getText(WebElement element, By elementBy) {
 
 		if (isElementPresent(element, elementBy)) {
@@ -804,13 +871,15 @@ public class WebDriverHelper {
 		}
 	}
 
-	/**
+	*/
+/**
 	 * Method to get text of an element within parent element
 	 * 
 	 * @param element
 	 * @return
 	 * @throws InterruptedException
-	 */
+	 *//*
+
 	public String getText(WebElement element) throws Exception {
 
 		if (isElementPresent(element, 5)) {
@@ -824,9 +893,11 @@ public class WebDriverHelper {
 		}
 	}
 
-	/**
+	*/
+/**
 	 * Method to handle alert box
-	 */
+	 *//*
+
 	public void handleAlert() {
 
 		try {
@@ -841,24 +912,28 @@ public class WebDriverHelper {
 		}
 	}
 
-	/**
+	*/
+/**
 	 * Method to wait for specific time till element is present
 	 * 
 	 * @param elementBy
 	 * @throws Exception 
-	 */
+	 *//*
+
 	public void waitForElementPresent(final By elementBy) throws Exception {
 
 		isElementPresent(elementBy,5);
 	}
 
-	/**
+	*/
+/**
 	 * Method to wait for specific time till element is present
 	 * 
 	 * @param elementBy
 	 * @param waitTimeSecs
 	 * @throws InterruptedException
-	 */
+	 *//*
+
 	public void waitForElementPresent(final By elementBy, int waitTimeSecs)
 			throws Exception {
 
@@ -866,14 +941,16 @@ public class WebDriverHelper {
 	}
 
 	
-	/**
+	*/
+/**
 	 * Method to check if element is Present within some seconds
 	 * 
 	 * @param elementBy
 	 * @param waitForSeconds
 	 * @return
 	 * @throws InterruptedException
-	 */
+	 *//*
+
 	public boolean isElementPresent(By elementBy, int waitForSeconds)
 			throws Exception {     
     	
@@ -910,7 +987,8 @@ public class WebDriverHelper {
     	return elementPresent;     
     }
 
-	/**
+	*/
+/**
 	 * Method to check if element is Present with in an element for some seconds
 	 * 
 	 * @param element
@@ -918,7 +996,8 @@ public class WebDriverHelper {
 	 * @param waitForSeconds
 	 * @return
 	 * @throws Exception
-	 */
+	 *//*
+
 	public boolean isElementPresent(WebElement element, By elementBy,
 			int waitForSeconds) throws Exception {
 
@@ -968,14 +1047,16 @@ public class WebDriverHelper {
 		return elementPresent;
 	}
 
-	/**
+	*/
+/**
 	 * Method to check web element is present
 	 * 
 	 * @param element
 	 * @param waitForSeconds
 	 * @return
 	 * @throws Exception
-	 */
+	 *//*
+
 	public boolean isElementPresent(WebElement element, int waitForSeconds)
 			throws Exception {
 
@@ -1022,9 +1103,11 @@ public class WebDriverHelper {
 		return elementPresent;
 	}
 
-	/**
+	*/
+/**
 	 * Method to wait for page to get loaded
-	 */
+	 *//*
+
 	public void waitForPageLoaded() {
 
 		ExpectedCondition<Boolean> expectation = new ExpectedCondition<Boolean>() {
@@ -1046,11 +1129,13 @@ public class WebDriverHelper {
 		}
 	}
 
-	/**
+	*/
+/**
 	 * Component to move actual mouse pointer to top left corner of page.
 	 * 
 	 * @throws AWTException
-	 */
+	 *//*
+
 	public void moveActualMouse() throws AWTException {
 
 		Robot robot = new Robot();
@@ -1058,13 +1143,15 @@ public class WebDriverHelper {
 		robot = null;
 	}
 
-	/**
+	*/
+/**
 	 * Component to move actual mouse pointer to top left corner of page
 	 * 
 	 * @param x
 	 * @param y
 	 * @throws AWTException
-	 */
+	 *//*
+
 	public void moveActualMouse(int x, int y) throws AWTException {
 
 		Robot robot = new Robot();
@@ -1072,14 +1159,16 @@ public class WebDriverHelper {
 		robot = null;
 	}
 
-	/**
+	*/
+/**
 	 * Component to click on close button of overlay and wait to until the
 	 * overlay closes itself.
 	 * 
 	 * @param elementToCheck
 	 * @param closeButton
 	 * @throws Exception
-	 */
+	 *//*
+
 	public void clickAndWaitUntilDisappear(By elementToCheck, By closeButton)
 			throws Exception {
 
@@ -1099,12 +1188,14 @@ public class WebDriverHelper {
 		}
 	}
 
-	/**
+	*/
+/**
 	 * Component to wait until the overlay closes itself
 	 * 
 	 * @param elementToCheck
 	 * @throws Exception
-	 */
+	 *//*
+
 	public void waitUntilDisappear(By elementToCheck) throws Exception {
 
 		int i = 0;
@@ -1127,12 +1218,14 @@ public class WebDriverHelper {
 		}
 	}
 
-	/**
+	*/
+/**
 	 * Component to paste text to a control
 	 * 
 	 * @param pasteBy
 	 * @throws Exception
-	 */
+	 *//*
+
 	public void pasteText(By pasteBy) throws Exception {
 
 		if (isElementPresent(pasteBy)) {
@@ -1142,14 +1235,16 @@ public class WebDriverHelper {
 		}
 	}
 
-	/**
+	*/
+/**
 	 * Component to get attribute value for a particular control
 	 * 
 	 * @param elementBy
 	 * @param attribute
 	 * @return
 	 * @throws Exception
-	 */
+	 *//*
+
 	public String getAttribute(By elementBy, String attribute) throws Exception {
 
 		String attributeValue = "";
@@ -1163,14 +1258,16 @@ public class WebDriverHelper {
 		return attributeValue;
 	}
 
-	/**
+	*/
+/**
 	 * Component to get attribute value for a particular control
 	 * 
 	 * @param element
 	 * @param attribute
 	 * @return
 	 * @throws Exception
-	 */
+	 *//*
+
 	public String getAttribute(WebElement element, String attribute)
 			throws Exception {
 
@@ -1184,7 +1281,8 @@ public class WebDriverHelper {
 		return attributeValue;
 	}
 
-	/**
+	*/
+/**
 	 * Component to get attribute value for a particular control
 	 * 
 	 * @param element
@@ -1192,7 +1290,8 @@ public class WebDriverHelper {
 	 * @param attribute
 	 * @return
 	 * @throws Exception
-	 */
+	 *//*
+
 	public String getAttribute(WebElement element, By elementBy,
 			String attribute) throws Exception {
 
@@ -1210,14 +1309,16 @@ public class WebDriverHelper {
 		return attributeValue;
 	}
 
-	/**
+	*/
+/**
 	 * Component to get CSS value for a particular control
 	 * 
 	 * @param elementBy
 	 * @param cssAttribute
 	 * @return
 	 * @throws Exception
-	 */
+	 *//*
+
 	public String getCssValue(By elementBy, String cssAttribute)
 			throws Exception {
 
@@ -1231,7 +1332,8 @@ public class WebDriverHelper {
 		return cssValue;
 	}
 
-	/**
+	*/
+/**
 	 * Component to get CSS value for a particular control
 	 * 
 	 * @param element
@@ -1239,7 +1341,8 @@ public class WebDriverHelper {
 	 * @param cssAttribute
 	 * @return
 	 * @throws Exception
-	 */
+	 *//*
+
 	public String getCssValue(WebElement element, By elementBy,
 			String cssAttribute) throws Exception {
 
@@ -1253,13 +1356,15 @@ public class WebDriverHelper {
 		return cssValue;
 	}
 
-	/**
+	*/
+/**
 	 * Method to getLocation for a particular element
 	 * 
 	 * @param elementBy
 	 * @return
 	 * @throws Exception
-	 */
+	 *//*
+
 	public Point getLocation(By elementBy) throws Exception {
 
 		Point locations = new Point(0, 0);
@@ -1272,23 +1377,27 @@ public class WebDriverHelper {
 		return locations;
 	}
 
-	/**
+	*/
+/**
 	 * Method to refresh web page
 	 * 
 	 * @throws Exception
-	 */
+	 *//*
+
 	public void refresh() throws Exception {
 
 		driver.navigate().refresh();
 	}
 
-	/**
+	*/
+/**
 	 * Method to get no of webElements count
 	 * 
 	 * @param elementBy
 	 * @return
 	 * @throws Exception
-	 */
+	 *//*
+
 	public int getElementsCount(By elementBy) throws Exception {
 
 		int noOfElements = 0;
@@ -1301,13 +1410,15 @@ public class WebDriverHelper {
 		return noOfElements;
 	}
 
-	/**
+	*/
+/**
 	 * Method to get webElements
 	 * 
 	 * @param elementBy
 	 * @return
 	 * @throws Exception
-	 */
+	 *//*
+
 	public List<WebElement> getElements(By elementBy) throws Exception {
 
 		List<WebElement> lstWebElements = new ArrayList<WebElement>();
@@ -1320,13 +1431,15 @@ public class WebDriverHelper {
 		return lstWebElements;
 	}
 
-	/**
+	*/
+/**
 	 * Method to get webElements
 	 * 
 	 * @param elementBy
 	 * @return
 	 * @throws Exception
-	 */
+	 *//*
+
 	public List<WebElement> getElements(WebElement webElement, By elementBy) throws Exception {
 
 		List<WebElement> lstWebElements = new ArrayList<WebElement>();
@@ -1339,13 +1452,15 @@ public class WebDriverHelper {
 		return lstWebElements;
 	}
 	
-	/**
+	*/
+/**
 	 * Method to get element count
 	 * @param webElement
 	 * @param elementBy
 	 * @return
 	 * @throws Exception
-	 */
+	 *//*
+
 	public int getElementsCount(WebElement webElement, By elementBy) throws Exception {
 
 		int noOfElements = 0;
@@ -1359,11 +1474,13 @@ public class WebDriverHelper {
 	}
 	
 	
-	/**
+	*/
+/**
 	 * Method to open new tab
 	 * 
 	 * @param url
-	 */
+	 *//*
+
 	public void openTab(String url) {
 
 		String script = "var d=document,a=d.createElement('a');a.target='_blank';a.href='%s';a.innerHTML='.';d.body.appendChild(a);return a";
@@ -1396,37 +1513,43 @@ public class WebDriverHelper {
 		}
 	}
 
-	/**
+	*/
+/**
 	 * Method to trigger javascript on web element
 	 * 
 	 * @param script
 	 * @param element
-	 */
+	 *//*
+
 	public void trigger(String script, WebElement element) {
 
 		((JavascriptExecutor) driver).executeScript(script, element);
 	}
 
-	/**
+	*/
+/**
 	 * Executes a script
 	 * 
 	 * @note Really should only be used when the web driver is sucking at
 	 *       exposing functionality natively
 	 * @param script
 	 *            The script to execute
-	 */
+	 *//*
+
 	public Object trigger(String script) {
 
 		return ((JavascriptExecutor) driver).executeScript(script);
 	}
 
-	/**
+	*/
+/**
 	 * Method to get width in pixels of an element
 	 * 
 	 * @param elementBy
 	 * @return
 	 * @throws Exception
-	 */
+	 *//*
+
 	public int getWidth(By elementBy) throws Exception {
 
 		int width = 0;
@@ -1439,13 +1562,15 @@ public class WebDriverHelper {
 		return width;
 	}
 
-	/**
+	*/
+/**
 	 * Method to get height in pixels of an element
 	 * 
 	 * @param elementBy
 	 * @return
 	 * @throws Exception
-	 */
+	 *//*
+
 	public int getHeight(By elementBy) throws Exception {
 
 		int height = 0;
@@ -1458,11 +1583,13 @@ public class WebDriverHelper {
 		return height;
 	}
 
-	/**
+	*/
+/**
 	 * Method to clear browser history
 	 * 
 	 * @throws Exception
-	 */
+	 *//*
+
 	public void clearHistory() throws Exception {
 
 		driver.manage().deleteAllCookies();
@@ -1473,11 +1600,13 @@ public class WebDriverHelper {
 				"History is cleared and page is refreshed", StepResult.PASS);
 	}
 
-	/**
+	*/
+/**
 	 * Method to set display style of element to block
 	 * 
 	 * @param elementBy
-	 */
+	 *//*
+
 	public void blockElement(By elementBy) {
 
 		WebElement weElement = driver.findElement(elementBy);
@@ -1487,12 +1616,14 @@ public class WebDriverHelper {
 				"arguments[0].style.display = 'block';", weElement);
 	}     
     
-    /**
+    */
+/**
      * Method to check if element is selected
      * @param elementBy
      * @return
      * @throws Exception
-     */
+     *//*
+
     public boolean isSelected(By elementBy) throws Exception {
     	
     	return driver.findElement(elementBy).isSelected();
@@ -1500,10 +1631,12 @@ public class WebDriverHelper {
     
     
     
-    /**
+    */
+/**
      * This method checks the ascending order of list.
      * 
-     */
+     *//*
+
     public boolean isAscending(List<Integer> sortOrder){
 	
     	boolean ascending = true;
@@ -1517,10 +1650,12 @@ public class WebDriverHelper {
     
     
     
-    /**
+    */
+/**
      * This method checks the descending order of list.
      * 
-     */
+     *//*
+
     public boolean isDescending(List<Integer> sortOrder){
 	
 		boolean descending = true;
@@ -1532,10 +1667,12 @@ public class WebDriverHelper {
 		return descending; 
     }
 
-    /**
+    */
+/**
 	 * Converts the accented characters to deaccented Ex: D�cor to Decor
 	 * 
-	 */
+	 *//*
+
 	public String deAccent(String str) {
 		String nfdNormalizedString = Normalizer.normalize(str,
 				Normalizer.Form.NFD);
@@ -1543,11 +1680,13 @@ public class WebDriverHelper {
 		return pattern.matcher(nfdNormalizedString).replaceAll("");
 	}
 	
-	/**
+	*/
+/**
 	 * Function that returns a string within quotes. Intended to be used in
 	 * reports.
 	 * 
-	 */
+	 *//*
+
 	public String inQuotes(String str) {
 		
 		if(str.contains("$")){
@@ -1559,10 +1698,12 @@ public class WebDriverHelper {
 			return "";
 	}
 	
-	/**
+	*/
+/**
 	 * Method to move to element
 	 * @param elementBy
-	 */
+	 *//*
+
 	public void moveToElement(By elementBy) {
     	
     	Actions act = new Actions(driver);	
@@ -1570,13 +1711,15 @@ public class WebDriverHelper {
 		act.moveToElement(mainMenu).build().perform();
     }	
 	
-	/**
+	*/
+/**
 	 * Method to send keys to text element without clearing
 	 * 
 	 * @param elementBy
 	 * @param typeValue
 	 * @throws InterruptedException
-	 */
+	 *//*
+
 	public void sendKeysWithoutClearing(By elementBy, String typeValue) throws Exception {
 
 		if (isElementPresent(elementBy)) {
@@ -1585,13 +1728,15 @@ public class WebDriverHelper {
 		}
 	}
 	
-	/**
+	*/
+/**
 	 * Method to getLocation for a particular element
 	 * 
 	 * @param elementBy
 	 * @return
 	 * @throws Exception
-	 */
+	 *//*
+
 	public Point getLocation(WebElement element, By elementBy) throws Exception {
 
 		Point location = new Point(0, 0);
@@ -1604,14 +1749,16 @@ public class WebDriverHelper {
 		return location;
 	}
 
-	/**
+	*/
+/**
 	 * Method to get text of an element within parent element
 	 * 
 	 * @param element
 	 * @param elementBy
 	 * @return
 	 * @throws Exception 
-	 */
+	 *//*
+
 	public String getText(By parentElement, By elementBy) throws Exception {
 
 		String text = "";
@@ -1629,13 +1776,15 @@ public class WebDriverHelper {
 		return text;
 	}
 	
-	/**
+	*/
+/**
 	 * Method to click element within parent element
 	 * 
 	 * @param element
 	 * @param elementBy
 	 * @throws Exception 
-	 */
+	 *//*
+
 	public void clickElement(By parentElementBy, By elementBy) throws Exception {
 
 		if(isElementPresent(parentElementBy, 2)) {
@@ -1649,3 +1798,4 @@ public class WebDriverHelper {
 		}		
 	}
 }
+*/

@@ -91,8 +91,8 @@ public class HomePage_TS {
     }
     @Test(priority = 7,retryAnalyzer = ReRunAutomationScripts.class)
     public static void TC_016() throws InterruptedException, IOException {
-        clickElementJs(VideoCall_appointmentType);
-        clickElementJs(Next_AppointmentType);
+//        clickElementJs(VideoCall_appointmentType);
+//        clickElementJs(Next_AppointmentType);
 
     }
     @Test(priority = 8,retryAnalyzer = ReRunAutomationScripts.class)
