@@ -120,6 +120,8 @@ public class WebDriver_Utils {
             if (isElementPresent(locator, 10)) {
                 driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(2));
             }
+
+
             try {
                 driver.findElement(locator).click();
             } catch (NoSuchElementException ex) {

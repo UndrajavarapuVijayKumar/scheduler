@@ -18,6 +18,8 @@ public class d1 {
         init("gc");
         launchBrowser("https://www.metlife.com/stories/benefits/deductible-vs-out-of-pocket-maximum/#:~:text=Both%20are%20annual%20costs%2C%20meaning,cost%20for%20all%20covered%20services.");
         clickElement(xp);
+
+
     }
 
 
