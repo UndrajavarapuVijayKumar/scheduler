@@ -9,8 +9,8 @@ import java.util.List;
 
 public class ArraySort {
     public static void main(String[] args) {
-        descendingOrder();
-
+//        descendingOrder();
+    ascendingOrder();
     }
     public static void descendingOrder(){
         Integer [] a = {100,200,300,400,500,900,700,800};

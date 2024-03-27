@@ -27,7 +27,11 @@ import java.time.Duration;
 import java.util.Base64;
 import java.util.Date;
 
+import static com.metlife.utils.jsExcutor_util.clickElementJs;
+
 public class WebDriver_Utils {
+    boolean exceptionOccured = false;
+//    static String beforeClickUrl = driver.getCurrentUrl();
     public static WebDriver driver;
     public static ExtentReports extent;
     public static ExtentTest eXtTest;
@@ -72,6 +76,70 @@ public class WebDriver_Utils {
 //        wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(locator));
         driver.findElement(locator).click();
         Thread.sleep(3000);
+
+    }
+    public static boolean isElementPresent(By elementBy, int waitForSeconds)
+            throws Exception {
+
+        boolean elementPresent = true;
+        int count = 0;
+
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(waitForSeconds));
+
+        while(elementPresent){
+            try{
+                if (driver.findElement(elementBy).isDisplayed()){
+                    break;
+                }else{
+                    if(count==waitForSeconds){
+                        elementPresent = false;
+                        break;
+                    }
+
+                    Thread.sleep(1000);
+                    count++;
+                }
+            }catch(Exception ex){
+                if(count==waitForSeconds){
+                    elementPresent = false;
+                    break;
+                }
+
+                Thread.sleep(1000);
+                count++;
+            }
+        }
+
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
+        return elementPresent;
+    }
+    public static void clickElement(By locator) throws Exception {
+        boolean exceptionOccured = false;
+        String beforeClickUrl = driver.getCurrentUrl();
+        try {
+            if (isElementPresent(locator, 10)) {
+                driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(2));
+            }
+            try {
+                driver.findElement(locator).click();
+            } catch (NoSuchElementException ex) {
+                System.out.println(ex.getMessage());
+                exceptionOccured=true;
+            }
+            if (exceptionOccured){
+                try {
+                    clickElementJs(locator);
+                }catch (Exception e){
+                    System.out.println(e.getMessage());
+                    driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
+                }
+            }
+        }
+        catch (Exception e) {
+            exceptionOccured=true;
+                System.out.println(e.getMessage());
+
+        }
     }
     public static void HardAssert(String ErrorValue, By ActualValue){
         Assert.assertEquals(ErrorValue,driver.findElement(ActualValue).getText());

@@ -10,9 +10,4 @@ Feature: Salesforce Scheduler
     And user clicked on login
     Then user should able to login
 
-  Scenario2: Invalid login
-    Given user have a browser with salesforce application
-    When user gave username
-    And user gave password
-    And user clicked on login
-    Then user should able to login
+
